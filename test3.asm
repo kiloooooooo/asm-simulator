@@ -1,0 +1,8 @@
+	MVI	A,01H
+	CALL	lp
+	HLT
+
+lp:	INR	A
+	CPI	20H
+	JM	lp
+	RET
