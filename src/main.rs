@@ -5,7 +5,7 @@ use std::fs::File;
 use std::io::Read;
 
 const GREETER: &str = r"
-asm-simulator v0.1.0
+asm-simulator v0.1.1
 Created by K.Takahashi
 ";
 
