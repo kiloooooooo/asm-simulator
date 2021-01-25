@@ -1,6 +1,6 @@
 use std::env;
 use asm_simulator::processor::Processor;
-use asm_simulator::parser::{ parse, assemble};
+use asm_simulator::parser::{ parse, assemble };
 use std::fs::File;
 use std::io::Read;
 
@@ -26,8 +26,9 @@ fn main() {
         .read_to_string(&mut program)
         .expect("Could not read the file!");
 
-    println!("===== INPUT PROGRAM =====\n{}", program);
-    println!("=========================");
+    println!("===== INPUT PROGRAM =====");
+    println!("{}", program);
+    println!("\n=========================");
 
     let program_list = parse(program.as_str());
     println!("===== SYMBOLS TABLE =====");
