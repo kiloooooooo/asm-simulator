@@ -4,7 +4,14 @@ use asm_simulator::parser::{ parse, assemble};
 use std::fs::File;
 use std::io::Read;
 
+const GREETER: &str = r"
+asm-simulator v0.1.0
+Created by K.Takahashi
+";
+
 fn main() {
+    println!("{}", GREETER);
+
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
