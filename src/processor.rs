@@ -23,7 +23,7 @@ impl Processor {
     }
 
     pub fn execute(&mut self) {
-        self.registers.put_sp(SpecialRegisters::SP, 20);
+        self.registers.put_sp(SpecialRegisters::SP, 0xF000);
         loop {
             let instruction = self.fetch();
 

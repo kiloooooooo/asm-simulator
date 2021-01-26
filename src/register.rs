@@ -132,7 +132,7 @@ impl RegisterSet {
         s += format!("B: {:02X}\tC: {:02X}\n\t", self.read(GeneralRegisters::B), self.read(GeneralRegisters::C)).as_str();
         s += format!("D: {:02X}\tE: {:02X}\n\t", self.read(GeneralRegisters::D), self.read(GeneralRegisters::E)).as_str();
         s += format!("H: {:02X}\tL: {:02X}\n\t", self.read(GeneralRegisters::H), self.read(GeneralRegisters::L)).as_str();
-        s += format!("PC:{:02X}\tSP:{:02X}", self.read_sp(SpecialRegisters::PC), self.read_sp(SpecialRegisters::SP)).as_str();
+        s += format!("PC:{:04X}\n\tSP:{:04X}", self.read_sp(SpecialRegisters::PC), self.read_sp(SpecialRegisters::SP)).as_str();
 
         return s;
     }

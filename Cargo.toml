@@ -1,6 +1,6 @@
 [package]
 name = "asm-simulator"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Kosuke Takahashi <kilotango37@icloud.com>"]
 edition = "2018"
 
