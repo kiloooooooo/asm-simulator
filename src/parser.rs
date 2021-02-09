@@ -1072,7 +1072,7 @@ pub fn assemble(list: &ProgramList) -> Vec<u8> {
 
 fn extract_symbols(line: &str) -> Vec<Symbol> {
     let imm_regex: Regex = Regex::new(r"^[0-9]").unwrap();
-    let reg_regex: Regex = Regex::new(r"^[A-EHLM]").unwrap();
+    let reg_regex: Regex = Regex::new(r"^[A-EHLM]$").unwrap();
     let splitter_regex: Regex = Regex::new(r"[\t,\x20]").unwrap();
 
     let mut result: Vec<Symbol> = vec![];
