@@ -909,7 +909,12 @@ pub fn parse(str: &str) -> ProgramList {
     let mut cursor: usize = 0;
     let mut abort_flag = false;
 
-    for (line_idx, line) in str.split('\n').enumerate() {
+    #[cfg(not(windows))]
+    let line_sep = '\n';
+    #[cfg(windows)]
+    let line_sep = "\r\n";
+
+    for (line_idx, line) in str.split(line_sep).enumerate() {
         // 空行は無視
         if line == "" {
             continue;
